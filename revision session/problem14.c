@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+struct problem14
+{
+    int data;
+    float co;
+};
+
+
 int main()
 {
     int n, i, flag = 0, count = 0;
