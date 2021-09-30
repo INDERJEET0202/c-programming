@@ -1,0 +1,42 @@
+1. Write a C program to find sum of all even numbers between 1 to n.
+
+2. Write a C program to calculate sum of digits of a number.
+
+3. Write a C program to print Fibonacci series up to n terms.
+
+4. Write a C program to count total number of even and odd elements in an array.
+
+5. 	Write a C program to put even and odd elements of array in two separate array.
+
+6. Write a C program to search an element in an array.
+
+Write C Program to Store Information (Name, RollNo, Marks)  of a Student and Display it  Using Structure. 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+7. C program to create, initialize, assign and access a pointer variable
+
+8. C program to swap two numbers using pointers
+
+9. C program to read array elements and print the value with the addresses
+
+10. C program to read and print student details using structure pointer,Demonstrate example of structure with pointer.
+
+11. C program to count vowels and consonants in a string using pointer.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+1. Write a 'C' program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.. 
+
+2. Write a C program to accept 5 numbers, store them in array and find out the smallest number using pointer.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+12. Write down a C program to add two complex numbers by passing Structure to a function.
+
+        struct compplex {
+            float real;
+            float imag;
+        };
+
+13. Write down a Program using C that will sum all elements in an array using pointer.
