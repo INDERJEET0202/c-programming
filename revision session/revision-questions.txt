@@ -40,3 +40,5 @@ Write C Program to Store Information (Name, RollNo, Marks)  of a Student and Dis
         };
 
 13. Write down a Program using C that will sum all elements in an array using pointer.
+
+14. Find out a value in an array list. Give a suitable message for first occurrence of the searched value. Display a not found message if the value is not present in the array.
