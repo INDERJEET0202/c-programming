@@ -16,8 +16,11 @@ void linkedListTravarsal(struct node *ptr)
     }
 }
 
-struct node *insertAtFirst(struct node *head, int data)
+struct node *insertAtFirst(struct node *head)
 {
+    int data;
+    printf("Enter data you want to add: ");
+    scanf("%d", &data);
     struct node *ptr = (struct node *)malloc(sizeof(struct node));
     ptr -> data = data;
 
@@ -40,6 +43,7 @@ int main()
     d = (struct node *)malloc(sizeof(struct node));
 
     head -> next = a;
+    head -> data = 1;
     
     a -> data = 11;
     a -> next = b;
@@ -53,6 +57,7 @@ int main()
     d -> data = 2;
     d -> next = NULL;
 
+    head = insertAtFirst(head);
     linkedListTravarsal(head);
 
     return 0;
