@@ -15,13 +15,15 @@ void main()
     struct str *head;
     head = (struct str *)malloc(sizeof(struct str));
     p = head;
-    int n = 5;
+    int n;
+    printf("Enter how many nodes you want - ");
+    scanf("%d", &n);
     
     printf("Enter %d datas - \n",n);
     for(int i = 0; i < n; i++)
     {
     scanf("%d",&(p -> d));
-    if(i != 4)
+    if(i != (n-1))
       {
       p -> next = (struct str *)malloc(sizeof(struct str));
       }
@@ -39,7 +41,7 @@ void main()
     InsertMid(head,n);
 
     printf("New list of data\n");
-    p=head;
+    p = head;
     for(int i=0;i<n+1;i++)
     {
         printf("%d ,",p->d);
