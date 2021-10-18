@@ -7,7 +7,7 @@ struct node
     struct node *next;
 };
 
-void linkedListTravarsal(struct node *ptr)
+void linkedListTraversal(struct node *ptr)
 {
     while (ptr != NULL)
     {
@@ -58,7 +58,7 @@ int main()
     d -> next = NULL;
 
     head = insertAtFirst(head);
-    linkedListTravarsal(head);
+    linkedListTraversal(head);
 
     return 0;
 }

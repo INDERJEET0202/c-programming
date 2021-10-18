@@ -9,7 +9,7 @@ struct str
 
 void InsertMid(struct str *,int);
 
-void main()
+void main() 
 {
     struct str *p;
     struct str *head;
@@ -19,7 +19,7 @@ void main()
     printf("Enter how many nodes you want - ");
     scanf("%d", &n);
     
-    printf("Enter %d datas - \n",n);
+    printf("Enter %d data - \n",n);
     for(int i = 0; i < n; i++)
     {
     scanf("%d",&(p -> d));
@@ -54,7 +54,7 @@ void main()
 void InsertMid(struct str *ptr,int n)
 {
     int md;
-    struct str * mid=(struct str *)malloc(sizeof(struct str));
+    struct str * mid = (struct str *)malloc(sizeof(struct str));
     printf("Enter the data to be inserted in middle: ");
     scanf("%d",&md);
     for(int i = 0; i < (n/2)-1; i++)
@@ -66,8 +66,7 @@ void InsertMid(struct str *ptr,int n)
     mid -> next = ptr -> next;
     ptr -> next = mid;
 
-
 }
 
 
-// Examaple - https://www.codesdope.com/blog/article/linked-lists-in-c-singly-linked-list/#:~:text=scanf%20(%22%25d%22%2C%26p%2D%3Edata),list%20by%20joining%20the%20nodes.
+// Example - https://www.codesdope.com/blog/article/linked-lists-in-c-singly-linked-list/#:~:text=scanf%20(%22%25d%22%2C%26p%2D%3Edata),list%20by%20joining%20the%20nodes.
