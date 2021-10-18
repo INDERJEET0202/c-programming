@@ -28,7 +28,7 @@ void main()
       p -> next = (struct str *)malloc(sizeof(struct str));
       }
 
-      else
+    else
       {
           p -> next = NULL;
       }
@@ -42,10 +42,10 @@ void main()
 
     printf("New list of data\n");
     p = head;
-    for(int i=0;i<n+1;i++)
+    for(int i = 0; i < n+1; i++)
     {
         printf("%d ,",p->d);
-        p=p->next;
+        p = p -> next;
     }
 }
 
@@ -57,14 +57,14 @@ void InsertMid(struct str *ptr,int n)
     struct str * mid=(struct str *)malloc(sizeof(struct str));
     printf("Enter the data to be inserted in middle: ");
     scanf("%d",&md);
-    for(int i=0;i<(n/2)-1;i++)
+    for(int i = 0; i < (n/2)-1; i++)
     {
-        ptr=ptr->next;
+        ptr = ptr -> next;
     }
     
-    mid->d=md;
-    mid->next=ptr->next;
-    ptr->next=mid;
+    mid -> d = md;
+    mid -> next = ptr -> next;
+    ptr -> next = mid;
 
 
 }
