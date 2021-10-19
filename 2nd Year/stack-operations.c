@@ -38,7 +38,7 @@ void push (struct stack *ptr, int value){
 
 int pop (struct stack *ptr){
     if(isEmpty(ptr)){
-        printf("Stack Underflow! Cannot POP to the stack\n");
+        printf("Stack Underflow! Cannot POP from the stack\n");
         return -1;
     }
     else{
@@ -49,9 +49,20 @@ int pop (struct stack *ptr){
 
 }
 
+int peek(struct stack *ptr, int i){
+    int arrIndex = (ptr -> top - i + 1);
+    if(arrIndex < 0){
+        printf(" Not a valid position");
+        return -1;
+    }
+    else{
+        return ptr -> arr[arrIndex];
+    }
+}
+
 int main(){
     struct stack *sp = (struct stack * ) malloc(1*sizeof(struct stack));
-        sp -> size = 10;
+        sp -> size = 50;
         sp -> top = -1;
         sp -> arr = (int *) malloc (sp -> size * sizeof(int));
         printf("Stack has been created successfully\n");
@@ -61,7 +72,7 @@ int main(){
         push(sp, 5324);
         push(sp, 11);
         push(sp, 423);
-        push(sp, 06);
+        push(sp, 006);
         push(sp, 666);
         push(sp, 56);
         push(sp, 76);
@@ -69,12 +80,17 @@ int main(){
         push(sp, 26);
         push(sp, 36);
         push(sp, 46); // ---> Stack Overflow
+        push(sp, 100); 
         printf("After pushing, Full - %d\n", isFull(sp));
         printf("After pushing, Empty - %d\n", isEmpty(sp));
 
-        printf("Popped %d from the stack\n", pop(sp));
-        printf("Popped %d from the stack\n", pop(sp));
-        printf("Popped %d from the stack\n", pop(sp));
+        // printf("Popped %d from the stack\n", pop(sp));
+
+        printf("The value of index 5 is %d\n", peek(sp, 5));
+
+        for (int j = 1; j <= sp -> top + 1; j++){
+            printf("The value at position %d is %d\n", j, peek(sp, j));
+        }
     
     return 0;
 }
