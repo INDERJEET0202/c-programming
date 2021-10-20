@@ -74,6 +74,17 @@ int peek(int index, struct node * top){
     }
 }
 
+int stackTop(struct node * ptr){
+    return ptr -> data;
+}
+
+int stackBottom(struct node * ptr){
+    while(ptr -> next != NULL){
+        ptr = ptr -> next;
+    }
+    return ptr -> data;
+}
+
 int main(){
     struct node * top = NULL;
     top = push(top, 28);
@@ -81,11 +92,14 @@ int main(){
     top = push(top, 15);
     top = push(top, 7);
 
-    // stackTraversal(top);
+    stackTraversal(top);
     // printf("Value at position 1 is %d\n", peek(1,top));
 
-    for(int i = 1; i <= 4; i++){
-        printf("Value at position %d is %d\n",i , peek(i,top));
-    }
+    // for(int i = 1; i <= 4; i++){
+    //     printf("Value at position %d is %d\n",i , peek(i,top));
+    // }
+
+    printf("Value of topmost element is %d\n", stackTop(top));
+    printf("Value of bottom most element is %d\n", stackBottom(top));
     return 0;
 }
