@@ -7,6 +7,21 @@ struct node
     struct node *next;
 };
 
+struct node * insert(struct node * head, int data){
+    struct node * ptr = (struct node *) malloc(1 * sizeof(struct node));
+    struct node * temp = head;
+    ptr -> data = data;
+    ptr -> next = NULL;
+    if(head == NULL){
+        head = ptr;
+        return head;
+    }
+    while(temp -> next != NULL){
+        temp = temp -> next;
+    }
+    temp -> next = ptr;
+    return head;
+}
 
 void linkedListPrint(struct node *ptr){
     while (ptr != NULL){
@@ -46,36 +61,37 @@ int search(int d, struct node * head){
 
 void main() 
 {
-
-    struct node *head;
-    struct node *p;
-    head = (struct node *)malloc(sizeof(struct node));
-    p = head;
+    // struct node *head;
+    // struct node *p;
+    // head = (struct node *)malloc(sizeof(struct node));
+    // p = head;
     int n, x;
-    printf("Enter how many nodes you want - ");
-    scanf("%d", &n);
+    // printf("Enter how many nodes you want - ");
+    // scanf("%d", &n);
     
-    printf("Enter %d data - ",n);
-    for(int i = 0; i < n; i++){
-    scanf("%d",&(p -> data));
-        if(i != (n-1)){
-        p -> next = (struct node *)malloc(sizeof(struct node));
-        }
-        else{
-          p -> next = NULL;
-        }
-        p = p -> next;
-    }
-
-    // int nodes;
-    // printf("Enter the number of nodes you want: ");
-    // scanf("%d", &nodes);
-    // for(int i = 1; i <= nodes; i++){
-    //     int dd;
-    //     printf("Input data for node %d: ", i);
-    //     scanf("%d", &dd);
-    //     head = (insertAtEnd(head, dd));
+    // printf("Enter %d data - ",n);
+    // for(int i = 0; i < n; i++){
+    // scanf("%d",&(p -> data));
+    //     if(i != (n-1)){
+    //     p -> next = (struct node *)malloc(sizeof(struct node));
+    //     }
+    //     else{
+    //       p -> next = NULL;
+    //     }
+    //     p = p -> next;
     // }
+
+
+    struct node * head = NULL;
+    int nodes;
+    printf("Enter the number of nodes you want: ");
+    scanf("%d", &nodes);
+    for(int i = 1; i <= nodes; i++){
+        int dd;
+        printf("Input data for node %d: ", i);
+        scanf("%d", &dd);
+        head = (insert(head, dd));
+    }
 
 
     int s = 1;
