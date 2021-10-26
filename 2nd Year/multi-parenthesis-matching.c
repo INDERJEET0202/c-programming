@@ -72,7 +72,6 @@ int match(char a, char b){
 }
  
 int parenthesisMatch(char * exp){
-    // Create and initialize the stack
     struct stack* sp = (struct stack *)malloc(1 * sizeof(struct stack));
     sp->size = 100;
     sp->top = -1;

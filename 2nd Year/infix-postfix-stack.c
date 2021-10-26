@@ -1,4 +1,4 @@
-// (((A – B - C) * (D + E / F)) / ((G - I) * J) $ K)
+// (((A–B-C)*(D+E/F))/((G-I)*J)$K)
 
 #include <stdio.h>
 #include <stdlib.h>
