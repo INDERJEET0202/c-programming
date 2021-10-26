@@ -61,27 +61,7 @@ int search(int d, struct node * head){
 
 void main() 
 {
-    // struct node *head;
-    // struct node *p;
-    // head = (struct node *)malloc(sizeof(struct node));
-    // p = head;
-    int n, x;
-    // printf("Enter how many nodes you want - ");
-    // scanf("%d", &n);
-    
-    // printf("Enter %d data - ",n);
-    // for(int i = 0; i < n; i++){
-    // scanf("%d",&(p -> data));
-    //     if(i != (n-1)){
-    //     p -> next = (struct node *)malloc(sizeof(struct node));
-    //     }
-    //     else{
-    //       p -> next = NULL;
-    //     }
-    //     p = p -> next;
-    // }
-
-
+    int x;
     struct node * head = NULL;
     int nodes;
     printf("Enter the number of nodes you want: ");
