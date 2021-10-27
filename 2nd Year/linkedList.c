@@ -31,9 +31,9 @@ struct Node *insertAtIndex(struct Node *head, int data, int index)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     struct Node *p = head;
-    int i = 0;
 
-    while (i != index - 1)
+    int i = 1;
+    while (i != index - 1) //https://youtu.be/_PuIzVqJJbA?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&t=508
     {
         p = p->next;
         i++;
@@ -61,15 +61,16 @@ struct Node *insertAtEnd(struct Node *head, int data)
 }
 
 // Case 4
-struct Node *insertAfterNode(struct Node *head, struct Node *prevNode, int data)
+struct Node *insertAfterNode(struct Node *head, struct Node *prevNode, int data) 
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node * temp = head; //https://youtu.be/_PuIzVqJJbA?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&t=1051
     ptr->data = data;
 
     ptr->next = prevNode->next;
     prevNode->next = ptr;
 
-    return head;
+    return temp;
 }
 
 int main()
@@ -104,9 +105,9 @@ int main()
     printf("Linked list before insertion\n");
     linkedListTraversal(head);
     // head = insertAtFirst(head, 56);
-    // head = insertAtIndex(head, 56, 1);
+    head = insertAtIndex(head, 56, 2);
     // head = insertAtEnd(head, 56);
-    head = insertAfterNode(head, third, 45);
+    // head = insertAfterNode(head, third, 45);
     printf("\nLinked list after insertion\n");
     linkedListTraversal(head);
 
