@@ -30,13 +30,13 @@ struct node * insertAtFirst(struct node * head, int data){
     ptr -> data = data;
     ptr -> next = NULL;
     struct node * temp = head;
-    if(ptr = NULL){
+    if(ptr == NULL){
         printf("Memory can't be allocated");
     }
     if(head == NULL){
         head = ptr;
+        return head;
     }
-    return head;
     ptr -> next = head;
     head = ptr;
     return head;
@@ -47,22 +47,31 @@ struct node * insertAtPos(struct node * head, int position, int data){
     ptr -> data = data;
     ptr -> next = NULL;
     struct node * temp = head;
-    if(ptr = NULL){
-    printf("Memory can't be allocated");
+    struct node * p = head;
+    int j = 0;
+    while(p != NULL){
+        p = p -> next;
+        j++;
+    }
+    if(j < position){
+        printf("Invalid position.\n");
+    }
+    if(ptr == NULL){
+        printf("Memory can't be allocated");
     }
     int i  = 1;
-    while(i <= position - 1){
+    while(i != position - 1){
         temp = temp -> next;
         i++;
     }
     ptr -> next = temp -> next;
-    ptr = temp -> next;
+    temp -> next = ptr;
     return head;
 }
 
 struct node * insertAtEnd(struct node* head, int data){
     struct node * ptr = (struct node *)malloc(sizeof(struct node));
-    if(ptr = NULL){
+    if(ptr == NULL){
         printf("Memory can't be allocated");
     }
     struct node *  temp = head;
@@ -70,8 +79,8 @@ struct node * insertAtEnd(struct node* head, int data){
     ptr -> next = NULL;
     if(head == NULL){
         head = ptr;
+        return head;
     }
-    return head;
     while(temp -> next != NULL){
         temp = temp -> next;
     }
@@ -84,11 +93,14 @@ void displayLinkedList(struct node * head){
     if(temp == NULL){
     printf("Linedlist is empty, please enter data first.\n");
     }
+    int i = 0;
     while(temp != NULL){
         printf("%d ->  ", (temp -> data));
         temp = temp -> next;
+        i++;
     }
-    printf(" NULL");
+    printf("NULL\n");
+    // printf("%d", i);
 }
 
 int main()
