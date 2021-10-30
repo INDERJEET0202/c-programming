@@ -6,7 +6,7 @@ struct node{
     struct node * next;
 };
 
-struct node * insert(struct node * head, int data){
+struct node * createList(struct node * head, int data){
     struct node * ptr = (struct node *)malloc(sizeof(struct node));
     struct node * temp = head;
     if(ptr == NULL){
@@ -110,25 +110,28 @@ int main()
     struct node * head = NULL;
 
     while(x == 0){
-    printf("\n\n Enter 1 to Create linkedlist. \n Enter 2 to insert a node at the begining.\n Enter 3 to insert node at position. \n Enter 4 to insert node at end. \n Enter 5 to Display linkedlist. \n Enter 6 to EXIT..\n\n");
+    printf("\n\n Enter 1 to Create linkedlist. \n Enter 2 to insert a node at the beginning.\n Enter 3 to insert node at position. \n Enter 4 to insert node at end. \n Enter 5 to Display linkedlist. \n Enter 6 to EXIT..\n\n");
     scanf("%d", &s);
         switch (s)
         {
         case 1:
+            // Create linkedlist
             printf("Enter number of nodes you want: ");
             scanf("%d", &nodes);
             for(int i = 1; i <= nodes; i++){
                 printf("Enter value for node %d: ", i);
                 scanf("%d", &first);
-                head = insert(head, first);
+                head = createList(head, first);
             }
             break;
         case 2:
+            // insert a node at the beginning
             printf("Enter data: ");
             scanf("%d", &second);
             head = insertAtFirst(head, second);
             break;
         case 3:
+            // insert node at given position
             printf("Enter position where do you want to enter: ");
             scanf("%d", &pos);
             printf("Enter value for node : ");
@@ -136,11 +139,13 @@ int main()
             head = insertAtPos(head, pos, value);
             break;
         case 4:
+            // insert node at end
             printf("Enter value to be entered: ");
             scanf("%d", &value);
             head = insertAtEnd(head, value);
             break;
         case 5:
+            // Display linkedlist
             displayLinkedList(head);
             break;
         case 6:
