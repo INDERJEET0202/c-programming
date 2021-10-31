@@ -31,6 +31,7 @@ void enQueue(struct queue * q, int val){
         printf("Data could not be entered cuz this Queue is full.\n");
     }
     else{
+        printf("Enqueued element %d\n", val);
         q -> r = q -> r + 1;
         q -> arr[q -> r] = val;
     }

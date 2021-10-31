@@ -56,15 +56,15 @@ int main(){
     q.arr = (int*) malloc(q.size*sizeof(int));
     
     // Enqueue few elements
-    enqueue(&q, 12);
-    enqueue(&q, 15);
-    enqueue(&q, 1); 
-    printf("Dequeuing element %d\n", dequeue(&q));
-    printf("Dequeuing element %d\n", dequeue(&q));
-    printf("Dequeuing element %d\n", dequeue(&q)); 
-    enqueue(&q, 45);
-    enqueue(&q, 45);
-    enqueue(&q, 45);
+    enQueue(&q, 12);
+    enQueue(&q, 15);
+    enQueue(&q, 1); 
+    printf("Dequeuing element %d\n", deQueue(&q));
+    printf("Dequeuing element %d\n", deQueue(&q));
+    printf("Dequeuing element %d\n", deQueue(&q)); 
+    enQueue(&q, 45);
+    enQueue(&q, 45);
+    enQueue(&q, 45);
  
     if(isEmpty(&q)){
         printf("Queue is empty\n");
