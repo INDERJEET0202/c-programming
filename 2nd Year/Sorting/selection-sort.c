@@ -9,7 +9,7 @@ void printArray(int* A, int n){
 }
 
 void selectionSort(int *A, int n){
-    int indexOfMin, temp;
+    int indexOfMin, temp, loda;
     printf("Running Selection sort...\n");
     for (int i = 0; i < n - 1; i++)
     {
