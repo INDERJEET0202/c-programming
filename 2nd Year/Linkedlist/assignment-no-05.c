@@ -183,8 +183,9 @@ int main()
 
     struct node * head = NULL;
 
+    printf("Choices...");
     while(x == 0){
-    printf("\n\n Enter 1 to Create linkedlist. \n Enter 2 to insert a node at the beginning.\n Enter 3 to insert node at position. \n Enter 4 to insert node at end. \n Enter 5 to Display linkedlist. \n Enter 6 to Delete First node. \n Enter 7 to delete at Position. \n Enter 8 to EXIT..\n\n");
+    printf("\n\n Enter 1 to Create linkedlist. \n <<< Insersion >>> \n Enter 2 to insert a node at the beginning.\n Enter 3 to insert node at position. \n Enter 4 to Insert node at end. \n Enter 5 to Display linkedlist. \n <<< Deletion >>> \n Enter 6 to Delete First node. \n Enter 7 to Delete at Position. \n Enter 8 to EXIT..\n\n");
     scanf("%d", &s);
     printf("\n");
         switch (s)
@@ -243,7 +244,7 @@ int main()
             printf("Quiting program...");
             break;
         default:
-            printf("Please choose correct option.");
+            printf("Please choose correct choice.");
         }
     }
     return 0;
