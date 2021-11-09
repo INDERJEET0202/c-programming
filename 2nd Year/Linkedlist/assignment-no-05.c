@@ -139,6 +139,10 @@ struct node * deleteAtPosition(struct node * head, int index){
         printf("Linked list is already empty!! \n");
         return head;
     }
+    if(index == 1){
+        printf("You can not delete first node by this function. Choose another option.");
+        return head;
+    }
     int k = 0, data;
     while(temp != NULL){
         temp = temp -> next;
