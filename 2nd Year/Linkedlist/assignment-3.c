@@ -36,8 +36,6 @@ void displayLinkedList(struct node * head){
         temp = temp -> next;
         i++;
     }
-    // printf("NULL\n");
-    // printf("%d", i);
 }
 
 struct node * deleteFirstNode(struct node * head){
