@@ -32,8 +32,8 @@ int getBalanceFactor(struct Node * n){
     if(n==NULL){
         return 0;
     }
-    return getHeight(n->left) - getHeight(n->right);
-}
+    return getHeight(n->left) - getHeight(n->right); 
+    }
  
 struct Node* rightRotate(struct Node* y){
     struct Node* x = y->left;
