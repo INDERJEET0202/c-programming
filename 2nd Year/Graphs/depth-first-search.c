@@ -25,6 +25,9 @@ void DFS(int i){
 
 int main()
 {
-    DFS(0); 
+    int starting_node;
+    printf("Enter the number where to start - ");
+    scanf("%d", &starting_node);
+    DFS(starting_node);
     return 0;
 }

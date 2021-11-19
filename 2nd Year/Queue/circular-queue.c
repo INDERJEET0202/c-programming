@@ -28,7 +28,7 @@ int isEmpty(struct circularQueue *q){
 
 void enQueue(struct circularQueue * q, int val){
     if(isFull(q)){
-        printf("Data could not be entered cuz this Queue is full.\n");
+        printf("Data could not be entered because this Queue is full.\n");
     }
     else{
         printf("Enqueued element %d\n", val);
