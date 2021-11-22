@@ -72,7 +72,7 @@ int main(){
         push(sp, 5324);
         push(sp, 11);
         push(sp, 423);
-        push(sp, 006);
+        push(sp, 6);
         push(sp, 666);
         push(sp, 56);
         push(sp, 76);

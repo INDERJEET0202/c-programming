@@ -52,6 +52,7 @@ int deQueue(struct queue * q){
 int main()
 {
     int i = 0;
+    int j;
     int n;
     printf("Enter the size of queue you want : ");
     scanf("%d", &n);
@@ -63,9 +64,12 @@ int main()
     // if(isEmpty(&q)){
     //     printf("Queue is empty.\n");
     // }
-
-    enQueue(&q, 12);
-    enQueue(&q, 15);
+    for(j = 1; j <= n; j++){
+        printf("Enter the element %d : ", j);
+        int data;
+        scanf("%d", &data);
+        enQueue(&q, data);
+    }
 
     // printf("Dequeued element is %d\n", deQueue(&q));
     // printf("Dequeued element is %d\n", deQueue(&q));

@@ -63,9 +63,15 @@ struct node * pop (struct node * top){
 
 int main(){
     struct node * top = NULL;
-    top = push(top, 78);
-    top = push(top, 7);
-    top = push(top, 8);
+    int n;
+    printf("Enter the number of elements to be pushed in the stack: ");
+    scanf("%d", &n);
+    for(int i = 1; i <= n; i ++){
+        int x;
+        printf("Enter %d element to be pushed to stack : ", i);
+        scanf("%d", &x);
+        top = push(top, x);
+    }
     stackTraversal(top);
 
     top = pop(top);

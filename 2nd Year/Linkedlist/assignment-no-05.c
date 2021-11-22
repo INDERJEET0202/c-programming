@@ -93,11 +93,11 @@ void displayLinkedList(struct node * head){
     if(temp == NULL){
     printf("Linedlist is empty, please enter data first.\n");
     }
-    int i = 0;
+    // int i = 0;
     while(temp != NULL){
         printf("Data - %d\n", (temp -> data));
         temp = temp -> next;
-        i++;
+        // i++;
     }
     // printf("NULL\n");
     // printf("%d", i);
