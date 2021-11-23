@@ -31,6 +31,7 @@ void printList(struct node * head) {
         printf("%d ", temp->data);
         temp = temp->next;
     }
+    printf("\n");
 }
 
 void reversePrintList(struct node * head) {
@@ -42,6 +43,7 @@ void reversePrintList(struct node * head) {
         printf("%d ", temp->data);
         temp = temp->prev;
     }
+    printf("\n");
 }
 
 struct node * insertAtFirst(struct node * head, int data) {
@@ -149,7 +151,7 @@ struct node * deleteLast(struct node * head) {
 int main(){
     struct node * head = NULL;
     //Switch case for different operations
-    int choice;
+    int choice, x = 1, data, nodes;
     printf("1. Create list\n");
     printf("2. Print list\n");
     printf("3. Reverse print list\n");
@@ -161,15 +163,18 @@ int main(){
     printf("9. Delete last\n");
     printf("10. Exit\n");
 
-    while(1){
+    while(x == 1){
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch(choice){
             case 1:
-                printf("Enter the element to be inserted: ");
-                int data;
-                scanf("%d", &data);
-                head = createList(head, data);
+                printf("Enter number of nodes: ");
+                scanf("%d", &nodes);
+                for (int i = 0; i < nodes; i++) {
+                    printf("Enter data: ");
+                    scanf("%d", &data);
+                    head = createList(head, data);
+                }
                 break;
             case 2:
                 printList(head);
@@ -207,7 +212,9 @@ int main(){
                 head = deleteLast(head);
                 break;
             case 10:
-                exit(0);
+                x = 0;
+                printf("Exiting\n");
+                break;
             default:
                 printf("Wrong choice\n");
         }
