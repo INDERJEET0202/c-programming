@@ -152,16 +152,7 @@ int main(){
     struct node * head = NULL;
     //Switch case for different operations
     int choice, x = 1, data, nodes;
-    printf("1. Create list\n");
-    printf("2. Print list\n");
-    printf("3. Reverse print list\n");
-    printf("4. Insert at first\n");
-    printf("5. Insert at end\n");
-    printf("6. Insert at position\n");
-    printf("7. Delete first\n");
-    printf("8. Delete at position\n");
-    printf("9. Delete last\n");
-    printf("10. Exit\n");
+    printf(" 1. Create list\n 2. Print list\n 3. Reverse print list\n 4. Insert at first\n 5. Insert at end\n 6. Insert at position\n 7. Delete first\n 8. Delete at position\n 9. Delete last\n 10. Exit\n");
 
     while(x == 1){
         printf("Enter your choice: ");
@@ -213,7 +204,7 @@ int main(){
                 break;
             case 10:
                 x = 0;
-                printf("Exiting\n");
+                printf("Quiting Program...\n");
                 break;
             default:
                 printf("Wrong choice\n");
