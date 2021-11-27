@@ -26,23 +26,33 @@ struct node * createList(struct node * head, int data) {
 }
 
 void printList(struct node * head) {
+    if(head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
     struct node * temp = head;
     while (temp != NULL) {
-        printf("%d ", temp->data);
+        printf("%d -> ", temp->data);
         temp = temp->next;
     }
+    printf("NULL\n");
     printf("\n");
 }
 
 void reversePrintList(struct node * head) {
+    if(head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
     struct node * temp = head;
     while (temp->next != NULL) {
         temp = temp->next;
     }
     while (temp != NULL) {
-        printf("%d ", temp->data);
+        printf("%d -> ", temp->data);
         temp = temp->prev;
     }
+    printf("HEAD\n");
     printf("\n");
 }
 
@@ -202,7 +212,7 @@ int main(){
             case 9:
                 head = deleteLast(head);
                 break;
-            case 10:
+            case 10:    
                 x = 0;
                 printf("Quiting Program...\n");
                 break;

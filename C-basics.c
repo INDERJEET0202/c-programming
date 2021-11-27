@@ -1,5 +1,5 @@
-// #include <stdio.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 // int sum(int a, int b) {
 //     return a + b;
 // }
@@ -27,4 +27,23 @@
 //     // return 0;
 // }
 
+void update(int *a, int *b){
+    int temp = *a;
+    *a = *a + *b;
+    *b = abs(temp - *b);
+}
 
+int main(){
+    int a, b;
+    printf("Enter 1st number: ");
+    scanf("%d", &a);                        
+    printf("Enter 2nd number: ");
+    scanf("%d", &b);
+    int *pa, *pb;
+    pa = &a;
+    pb = &b;
+    printf("%d, %d", a, b);
+    update(pa, pb);
+    printf("%d, %d", a, b);
+
+}
