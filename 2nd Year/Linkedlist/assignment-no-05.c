@@ -154,7 +154,7 @@ struct node * deleteAtPosition(struct node * head, int index){
     }
     for (int i = 1; i < index - 1; i++)
     {
-        ptr  = ptr -> next;
+        ptr = ptr -> next;
         q = q -> next;
     }
     data = q -> data;
