@@ -74,14 +74,14 @@ int main(){
                     }   
                     break;
                 case 2:
-                    // value = dequeue();
-                    // if(value == -1){
-                    //     printf("Element can not be dequeued");
-                    // }
-                    // else{
-                    //     printf("Element %d has been dequeued...", value);
-                    // }
-                    printf("Dequeued element %d", dequeue());
+                    value = dequeue();
+                    if(value == -1){
+                        printf("Element can not be dequeued");
+                    }
+                    else{
+                        printf("Element %d has been dequeued...", value);
+                    }
+                    // printf("Dequeued element %d", dequeue());
                     break;
                 case 3:
                     printQueue();
