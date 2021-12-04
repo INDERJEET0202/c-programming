@@ -29,6 +29,7 @@ void insert(int data)
         parent = NULL;
 
         while(1){
+        // while(current != NULL){
             parent = current;
 
             // go to left of the tree
@@ -91,12 +92,14 @@ int main()
     printf("Enter the number of elements: ");
     scanf("%d", &elements);
     int *array = (int *)malloc(sizeof(int) * elements);
-    printf("enter the head node: ");
-    for (i = 0; i < elements; i++)
+    // printf("enter the head node: \n");
+    for (i = 0; i < elements; i++){
+        printf("Enter data %d - ", i + 1);
         scanf("%d", &array[i]);
-
-    for (i = 0; i < elements; i++)
         insert(array[i]);
+    }
+    // for (i = 0; i < elements; i++)
+    //     insert(array[i]);
 
     printf("\nPreorder traversal: ");
     pre_order_traversal(root);
@@ -109,3 +112,4 @@ int main()
 
     return 0;
 }
+
