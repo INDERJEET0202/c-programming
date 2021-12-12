@@ -61,8 +61,8 @@ void mergeSort(int A[], int low, int high){
 
 int main(){
 
-    int A[] = {12, 54, 65, 7, 23, 9};
-    int n = 6;
+    int A[] = {12, 54, 65, 7, 23, 9, 123, 213, 76, 9, 4, 1, 432, 236, 146, 34, 23};
+    int n = sizeof(A)/sizeof(A[0]);
     printArray(A, n);
     mergeSort(A, 0, n - 1);
     printArray(A, n);
