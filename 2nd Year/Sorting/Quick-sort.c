@@ -38,12 +38,12 @@ int partition(int A[], int low, int high){
 
 void quickSort(int A[], int low, int high){
     int partitionIndex; //Index of pivot after partitioning
-        if(low < high){
-            partitionIndex = partition(A, low, high);
-            printArray(A, 12);
-            quickSort(A, low, partitionIndex - 1); //Sort elements before pivot(left of pivot)
-            quickSort(A, partitionIndex + 1, high); //Sort elements after pivot(right of pivot)
-        }
+    if(low < high){
+        partitionIndex = partition(A, low, high);
+        printArray(A, 12); //Prints the array after each partition
+        quickSort(A, low, partitionIndex - 1); //Sort elements before pivot(left of pivot)
+        quickSort(A, partitionIndex + 1, high); //Sort elements after pivot(right of pivot)
+    }
 }
 
 int main(){
