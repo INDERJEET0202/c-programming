@@ -59,10 +59,19 @@ void countSort(int * A, int n){
 }
 
 int main(){
-    int A[] = {9, 1, 4, 14, 4, 15, 6};
-    int n = 7;
+    // int A[] = {9, 1, 4, 14, 4, 15, 6};
+    // int n = 7;
+
+    // Initialize a big array with 1000 digits and fill the array with random numbers
+    int A[100];
+    for (int i = 0; i < 100; i++)
+    {
+        A[i] = rand()%100;
+    }
+    int n = sizeof(A)/sizeof(A[0]);
     printArray(A, n);
     countSort(A, n);
+    printf("\n");
     printArray(A, n); 
     return 0;
 }
