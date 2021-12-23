@@ -25,4 +25,5 @@ int main(){
     else{
         printf("Element not found\n");
     }
+    return 0;
 }
