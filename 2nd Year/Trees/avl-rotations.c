@@ -25,7 +25,7 @@ struct Node *createNode(int key){
 }
 
 int max (int a, int b){
-    return (a>b)?a:b;
+    return (a > b)?a:b;
 }
  
 int getBalanceFactor(struct Node * n){
@@ -74,20 +74,20 @@ struct Node *insert(struct Node* node, int key){
     int bf = getBalanceFactor(node);
  
     // Left Left Case
-        if(bf>1 && key < node->left->key){
+        if(bf > 1 && key < node->left->key){
             return rightRotate(node);
         }
     // Right Right Case
-        if(bf<-1 && key > node->right->key){
+        if(bf < -1 && key > node->right->key){
             return leftRotate(node);
         }
     // Left Right Case
-    if(bf>1 && key > node->left->key){
+    if(bf > 1 && key > node->left->key){
             node->left = leftRotate(node->left);
             return rightRotate(node);
         }
     // Right Left Case
-    if(bf<-1 && key < node->right->key){
+    if(bf < -1 && key < node->right->key){
             node->right = rightRotate(node->right);
             return leftRotate(node);
         }
@@ -106,14 +106,23 @@ void preOrder(struct Node *root)
  
 int main(){
     struct Node * root = NULL;
- 
- 
-    root = insert(root, 1);
-    root = insert(root, 2);
-    root = insert(root, 4);
-    root = insert(root, 5);
-    root = insert(root, 6);
-    root = insert(root, 3);
+    int elements, data, i;
+    printf("Enter number of elements: ");
+    scanf("%d", &elements);
+    printf("Enter elements: ");
+    for(i=0; i<elements; i++){
+        scanf("%d", &data);
+        root = insert(root, data);
+    }
+    printf("Preorder traversal of the constructed AVL tree is \n");
     preOrder(root);
+ 
+    // root = insert(root, 1);
+    // root = insert(root, 2);
+    // root = insert(root, 4);
+    // root = insert(root, 5);
+    // root = insert(root, 6);
+    // root = insert(root, 3);
+    // preOrder(root);
     return 0;
 }
