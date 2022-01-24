@@ -29,15 +29,15 @@ int max (int a, int b){
 }
  
 int getBalanceFactor(struct Node * n){
-    if(n==NULL){
+    if(n == NULL){
         return 0;
     }
-    return getHeight(n->left) - getHeight(n->right); 
+    return getHeight(n -> left) - getHeight(n -> right); 
     }
  
 struct Node* rightRotate(struct Node* y){
-    struct Node* x = y->left;
-    struct Node* T2 = x->right;
+    struct Node* x = y -> left;
+    struct Node* T2 = x -> right;
  
     x->right = y;
     y->left = T2;
@@ -49,14 +49,14 @@ struct Node* rightRotate(struct Node* y){
 }
  
 struct Node* leftRotate(struct Node* x){
-    struct Node* y = x->right;
-    struct Node* T2 = y->left;
+    struct Node* y = x -> right;
+    struct Node* T2 = y -> left;
  
     y->left = x;
     x->right = T2;
  
-    x->height = max(getHeight(x->right), getHeight(x->left)) + 1;
-    y->height = max(getHeight(y->right), getHeight(y->left)) + 1;
+    x->height = max(getHeight(x -> right), getHeight(x -> left)) + 1;
+    y->height = max(getHeight(y -> right), getHeight(y -> left)) + 1;
  
     return y;
 }
@@ -66,9 +66,9 @@ struct Node *insert(struct Node* node, int key){
         return  createNode(key);
  
     if (key < node->key)
-        node->left  = insert(node->left, key);
+        node -> left  = insert(node -> left, key);
     else if (key > node->key)
-        node->right = insert(node->right, key);
+        node -> right = insert(node -> right, key);
  
     node->height = 1 + max(getHeight(node->left), getHeight(node->right));
     int bf = getBalanceFactor(node);
@@ -110,7 +110,7 @@ int main(){
     printf("Enter number of elements: ");
     scanf("%d", &elements);
     printf("Enter elements: ");
-    for(i=0; i<elements; i++){
+    for(i = 0; i < elements; i++){
         scanf("%d", &data);
         root = insert(root, data);
     }
