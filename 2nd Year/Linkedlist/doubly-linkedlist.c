@@ -56,6 +56,21 @@ void reversePrintList(struct node * head) {
     printf("\n");
 }
 
+struct node * reverseDoublyLinkedlist(struct node * head){
+    struct node * temp = head;
+    struct node * prev = NULL;
+    struct node * next = NULL;
+    while(temp != NULL){
+        next = temp->next;
+        temp->next = prev;
+        temp->prev = next;
+        prev = temp;
+        temp = next;
+    }
+    head = prev;
+    return head;
+}
+
 struct node * insertAtFirst(struct node * head, int data) {
     struct node * ptr = (struct node *)malloc(sizeof(struct node));
     ptr->data = data;
