@@ -180,6 +180,21 @@ struct node * deleteAtValue(struct node * head, int value){
     return head;
 }
 
+void reversePrint(struct node * head){
+    struct node * ptr = head;
+    if(ptr == NULL){
+        printf("Linked list is already empty!! \n");
+        return;
+    }
+    while(ptr -> next != NULL){
+        ptr = ptr -> next;
+    }
+    while(ptr != NULL){
+        printf("Data - %d\n", ptr -> data);
+        ptr = ptr -> next;
+    }
+}
+
 int main()
 {
     int x = 0, s, nodes, first, pos, second, value, pos1;
