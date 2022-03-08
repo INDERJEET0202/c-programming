@@ -36,7 +36,7 @@ int partition(int A[], int low, int high){
     return j;
 }
 
-void quickSort(int A[], int low, int high){
+void quickSort(int A[], int low, int high){ //time complexity O(n log n)
     int partitionIndex; //Index of pivot after partitioning
     if(low < high){
         partitionIndex = partition(A, low, high);
@@ -49,29 +49,29 @@ void quickSort(int A[], int low, int high){
 int main(){
 
 
-    int arr[10], i , n;
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-    printf("Enter the elements: ");
-    for(i = 0; i < n; i++){
-        scanf("%d", &arr[i]);
-    }
-    quickSort(arr, 0, n - 1);
-    printf("\nSorted array is: \n");
-    printArray(arr, n);
-    // int elements, i;
+    // int arr[10], i , n;
     // printf("Enter the number of elements: ");
-    // scanf("%d", &elements);
-    // int *array = (int *)malloc(elements * sizeof(int));
-    // for (i = 0; i < elements; i++){
-    //     printf("Enter data %d - ", i + 1);
-    //     scanf("%d", &array[i]);
+    // scanf("%d", &n);
+    // printf("Enter the elements: ");
+    // for(i = 0; i < n; i++){
+    //     scanf("%d", &arr[i]);
     // }
-    // printf("\nUnsorted array is: \n");
-    // printArray(array, elements);
-    // quickSort(array, 0, elements - 1);
+    // quickSort(arr, 0, n - 1);
     // printf("\nSorted array is: \n");
-    // printArray(array, elements);
+    // printArray(arr, n);
+    int elements, i;
+    printf("Enter the number of elements: ");
+    scanf("%d", &elements);
+    int *array = (int *)malloc(elements * sizeof(int));
+    for (i = 0; i < elements; i++){
+        printf("Enter data %d - ", i + 1);
+        scanf("%d", &array[i]);
+    }
+    printf("\nUnsorted array is: \n");
+    printArray(array, elements);
+    quickSort(array, 0, elements - 1);
+    printf("\nSorted array is: \n");
+    printArray(array, elements);
 
     return 0;
 }
