@@ -19,21 +19,29 @@ void printArray(float* A, int n){
 
 int total_profit(float* profits, float* deadlines, int n, int d_line){
     MergeSort(profits, deadlines, 0, n - 1);
-    // printArray(profits, n);
-    // printArray(deadlines, n);
     int* plan = (int*) malloc(d_line * sizeof(int));
     for(int i = 0; i < d_line; i++){
         plan[i] = -1;
     }
     int profit = 0;
+    
     for(int i = 0; i < n; i++){
-        int j = 0;
-        while(j < d_line && plan[j] != -1){
-            j++;
-        }
-        if(j < d_line){
-            plan[j] = i;
+        int j=deadlines[i];
+        if(plan[j-1]==-1){
+            plan[j-1]=j;
             profit += profits[i];
+            printf("Deadline : %d , Profit : %f\n",j,profits[i]);
+        }
+        else{
+            for(int k=j-2;k>=0;k--){
+                if(k>=0 && plan[k]==-1){
+                    plan[k]=j;
+                    profit += profits[i];
+                    printf("Deadline : %d , Profit : %f\n",j,profits[i]);
+                    //k=-1;
+                    break;
+                }
+            }
         }
     }
     return profit;
@@ -118,4 +126,3 @@ void Merge(float profits[], float deadlines[], int low, int high, int mid){
 		deadlines[i] = deadlines2[i - low];
 	}
 }
-
