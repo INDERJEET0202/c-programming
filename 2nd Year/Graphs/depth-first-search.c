@@ -14,7 +14,7 @@ int a[7][7] = {
 
 void DFS(int i){
     int j;
-    printf("%d", i);
+    printf("%d ", i);
     visited[i] = 1;
     for(j = 0; j < 7; j++){
         if(a[i][j] == 1 && visited[j] == 0){
