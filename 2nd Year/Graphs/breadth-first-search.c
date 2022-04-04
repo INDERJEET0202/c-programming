@@ -31,7 +31,7 @@ void enQueue(struct queue * q, int val){
         printf("Data could not be entered cuz this Queue is full.\n");
     }
     else{
-        printf("Enqueued element %d\n", val);
+        // printf("Enqueued element %d\n", val);
         q -> r = q -> r + 1;
         q -> arr[q -> r] = val;
     }
@@ -51,14 +51,16 @@ int deQueue(struct queue * q){
 
 int main()
 {
-    struct queue q; 
+    struct queue q;
     q.size = 400;
     q.f = q.r = 0;
     q.arr = (int *)malloc(q.size * sizeof(int));
 
     // BFS Implementation
     int u;
-    int i = 0;
+    int i;
+    printf("Enter the starting node - ");
+    scanf("%d", &i);
     int visited[7] = {0,0,0,0,0,0,0};
     int a[7][7] = {
         {0,1,1,1,0,0,0},
@@ -69,7 +71,7 @@ int main()
         {0,0,0,0,1,0,0},
         {0,0,0,0,1,0,0},
     };
-    printf("%d", i);
+    printf("%d ", i);
     visited[i] = 1;
     enQueue(&q, i); //Enqueue i for exploration
     while(!isEmpty(&q)){
@@ -78,7 +80,7 @@ int main()
         for (int j = 0; j < 7; j++)
         {
             if(a[node][j] == 1 && visited[j] == 0){
-                printf("%d", j);
+                printf("%d ", j);
                 visited[j] = 1;
                 enQueue(&q, j);
             }
