@@ -1,0 +1,34 @@
+Data types:-
+
+int - integer %d
+double %lf
+float %f
+long %ld
+char %c
+short
+signed
+unsigned
+
+
+Keywords:-
+
+struct 
+switch
+default
+void
+return
+do
+while
+for
+if
+else
+const
+break
+continue
+pass
+sizeof
+typedef
+define
+
+new line = \n
+space / tab = \\t
