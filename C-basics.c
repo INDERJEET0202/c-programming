@@ -33,6 +33,11 @@ void update(int *a, int *b){
     *b = abs(temp - *b);
 }
 
+int sum(int a, int b){
+    int c = a + b;
+    return c;
+}
+
 int main(){
     int a, b;
     printf("Enter 1st number: ");
