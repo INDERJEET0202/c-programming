@@ -1,0 +1,35 @@
+// 5 marks
+
+// int marks[5]
+// 1D Array straight_line
+
+56 78 89 60 87 -> 1D Array
+ 0  1  2  3  4  
+ marks[0];
+
+// 2D Array rectangle
+//     int matrix[4][4];
+
+
+//      matrix[0] -> 56 78 89 60 || matrix[0][0]
+
+//   r  56 78 89 60 
+//   o  56 78 89 60 
+//   w  56 78 89 60 
+//   s  56 78 89 60 
+
+// 3D Array cube
+
+//     int cube[4][4][4];
+
+
+// 400 404 408 412 416
+
+// array -> contiguous memory allocation.
+        //  can only store simillar datatypes.
+        // array size must be declared. (can be overcommed by Dynamic memory allocation)
+        // array index starts from 0.
+        // array index must be integer.
+
+String -> array of characters 
+   char name[5]   =    {'r', 'o', 'h', 'a', 'n'};
