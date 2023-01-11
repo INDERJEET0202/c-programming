@@ -1,18 +1,17 @@
 Data types:-
-
-int - integer %d
-double %lf
-float %f
-long %ld
-char %c
-short
+int - integer %d 5 -5 format specifier
+double %lf 4.5
+float %f 5.34
+long %ld 982347928374
+char %c  'a' 
+short 
 signed
 unsigned
 
 
 Keywords:-
 
-struct 
+struct
 switch
 default
 void

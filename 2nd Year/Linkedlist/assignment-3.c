@@ -69,8 +69,7 @@ struct node * deleteAtPosition(struct node * head, int index){
         printf("Invalid position.\n");
         return head;
     }
-    for (int i = 1; i < index - 1; i++)
-    {
+    for (int i = 1; i < index - 1; i++){
         ptr  = ptr -> next;
         q = q -> next;
     }

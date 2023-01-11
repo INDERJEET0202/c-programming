@@ -1,4 +1,4 @@
-= assignment operator   
+= -> assignment operator   
 a = 10 left <- right
 
 + addition operator

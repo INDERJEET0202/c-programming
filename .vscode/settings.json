@@ -14,6 +14,8 @@
         "string_view": "c",
         "deque": "c",
         "vector": "c",
-        "iterator": "c"
-    }
+        "iterator": "c",
+        "cstdio": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

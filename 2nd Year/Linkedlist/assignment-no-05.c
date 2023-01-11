@@ -42,6 +42,26 @@ struct node * insertAtFirst(struct node * head, int data){
     return head;
 }
 
+struct node * insertAtMiddle(struct node * head, int data, int position){
+    struct node * ptr = (struct node *)malloc(sizeof(struct node));
+    struct node * temp = head;
+    ptr -> data = data;
+    ptr -> next = NULL;
+    if(ptr == NULL){
+        printf("Memory can't be allocated");
+    }
+    if(head == NULL){
+        head = ptr;
+        return head;
+    }
+    for(int i = 0; i < position - 1; i++){
+        temp = temp -> next;
+    }
+    ptr -> next = temp -> next;
+    temp -> next = ptr;
+    return head;
+}
+
 struct node * insertAtPos(struct node * head, int position, int data){
     struct node * ptr = (struct node *)malloc(sizeof(struct node));
     ptr -> data = data;
@@ -163,6 +183,9 @@ struct node * deleteAtPosition(struct node * head, int index){
     free(q);
     return head;
 }
+
+// Delete middle node
+
 
 struct node * deleteAtValue(struct node * head, int value){
     struct node *p = head;

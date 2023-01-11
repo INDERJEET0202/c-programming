@@ -2,6 +2,30 @@
 
 #include <stdio.h>
 
+int leap_year(int year){ 2024
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+if (condition){
+    // do something
+}
+else if(condition){
+    // do something
+}
+else{
+    // do something 
+}
+
+
+
+
+
+
 int main(){
     int number;
     printf("Enter a number: ");

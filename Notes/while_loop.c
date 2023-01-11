@@ -1,12 +1,19 @@
 #include <stdio.h>
 
 int main(){
-    int i = 1;
-    int sum = 1;
+
+    int i = 1; //initialize
+    // int sum = 1;
+
+    // while(condition = True){
+    //     statement to be performed
+
+    //     increment/decrement
+    // }
+
     while(i <= 10){
         printf("%d\n", sum);
-        sum++;
-        // i--;
+        i--;
     }
     return 0;
 }

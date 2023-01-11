@@ -9,22 +9,22 @@ int main(){
     int choice;
     scanf("%d", &choice);
 
-    if(choice == 1){
-        sum = a + b;
-        printf("Addition of %d and %d is %d", a, b, sum);
-    }
-    else if(choice == 2){
-        printf("Subtraction of %d and %d is %d", a, b, a - b);
-    }
-    else if(choice == 3){
-        printf("Multiplication of %d and %d is %d", a, b, a * b);
-    }
-    else if(choice == 4){
-        printf("Division of %d and %d is %d", a, b, (a / b));
-    }
-    else{
-        printf("Invalid Input");
-    }
+    // if(choice == 1){
+    //     sum = a + b;
+    //     printf("Addition of %d and %d is %d", a, b, sum);
+    // }
+    // else if(choice == 2){
+    //     printf("Subtraction of %d and %d is %d", a, b, a - b);
+    // }
+    // else if(choice == 3){
+    //     printf("Multiplication of %d and %d is %d", a, b, a * b);
+    // }
+    // else if(choice == 4){
+    //     printf("Division of %d and %d is %d", a, b, (a / b));
+    // }
+    // else{
+    //     printf("Invalid Input");
+    // }
 
 
 
